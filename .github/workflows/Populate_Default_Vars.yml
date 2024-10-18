@@ -1,0 +1,19 @@
+name: Populate Default Environment Variables
+
+on:
+  push:
+
+jobs:
+  Populate_Env_Vars:
+    name: print the default values
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print_ubuntu_Vars
+        run: |
+          echo "$GITHUB_REF_NAME"
+          echo "$GITHUB_REPOSITORY"
+          echo "$GITHUB_WORKFLOW_REF"
+          echo "$RUNNER_ENVIRONMENT"
+          echo "$RUNNER_WORKSPACE"
+          echo "$RUNNER_ENVIRONMENT"
+          echo "$RUNNER_OS"
